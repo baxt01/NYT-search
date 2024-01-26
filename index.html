@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New York Time Search</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+    crossorigin="anonymous">
+</head>
+<body>
+    <header class="header">
+        <h1 class="position-absolute py-5 top-0 start-50 translate-middle-x text-light">New York Times Search</h1>
+    </header>
+    <div class="container-fluid">
+        <div class="card" style="width: 100%">
+            <div class="card-body">
+                <div class="card-title bg-danger-subtle">Search Parameters</div>
+                <form action="#">
+                    <div class="mb-3">
+                        <!-- The search criteria -->
+                        <label for="search-terms" class="form-label">Search Terms:</label>
+                        <input type="text" class="form-control" id="search-terms">
+                        <div id="search-termsDiv" class="form-text mb-3">Enter the story you want to search for.</div>
+                       
+                        <!-- Number of records to retrieve -->
+                        <label for="article-count" class="form-label">Number Of Records To retrieve:</label>
+                        <input type="number" class="form-control" id="article-count">
+                        <div id="number-of-records" class="form-text mb-3">Choose how many records you want to see.</div>
+                       
+                        <!-- Start year (optional) -->
+                        <label for="start-year" class="form-label">Start Year:</label>
+                        <input type="text" class="form-control" id="start-year">
+                        <div id="start-year" class="form-text mb-3">(Optional) Choose the year you wish to start the search from</div>
+                       
+                        <!-- End year (optional) -->
+                        <label for="end-year" class="form-label">End Year:</label>
+                        <input type="text" class="form-control" id="end-year">
+                        <div id="end-year" class="form-text mb-3">(Optional) Choose the year you wish to end the search from</div>
+                       
+                        <!-- search and clear results options -->
+                        <button type="submit" class="btn btn-primary my-3 mb-3" id="get-stories">search</button> <button type="reset" class="btn btn-primary" id="clear-all">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card" style="width: 100%">
+            <div class="card-body">
+                <div class="card-title bg-danger-subtle">Top Articles</div>
+                <div class="my-3" id="article-section">
+                    <!-- Articles get dumped here -->
+                </div>
+            </div>
+        </div>
+        <footer class="footer mx-auto" style="text-align: center;">Made with heist!</footer>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+    crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
